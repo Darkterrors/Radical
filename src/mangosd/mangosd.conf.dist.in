@@ -62,9 +62,9 @@ ConfVersion=2010100901
 RealmID = 1
 DataDir = "."
 LogsDir = ""
-LoginDatabaseInfo     = "127.0.0.1;3306;mangos;mangos;realmd"
-WorldDatabaseInfo     = "127.0.0.1;3306;mangos;mangos;mangos"
-CharacterDatabaseInfo = "127.0.0.1;3306;mangos;mangos;characters"
+LoginDatabaseInfo     = "127.0.0.1;3306;root;mangos;realmd"
+WorldDatabaseInfo     = "127.0.0.1;3306;root;mangos;mangos"
+CharacterDatabaseInfo = "127.0.0.1;3306;root;mangos;characters"
 LoginDatabaseConnections = 1
 WorldDatabaseConnections = 1
 CharacterDatabaseConnections = 1
@@ -214,10 +214,10 @@ BindIP = "0.0.0.0"
 #
 ###################################################################################################################
 
-UseProcessors = 0
+UseProcessors = 0 //Pon Raynar el numero de procesadores que tenga el dedicado
 ProcessPriority = 1
 Compression = 1
-PlayerLimit = 100
+PlayerLimit = 100 // Pon Raynar el maximo numero de jugadores que puede haber en Radical Server
 SaveRespawnTimeImmediately = 1
 MaxOverspeedPings = 2
 GridUnload = 1
@@ -370,7 +370,7 @@ LogSQL = 1
 PidFile = ""
 LogLevel = 3
 LogTime = 0
-LogFile = "Server.log"
+LogFile = "World.log"
 LogTimestamp = 0
 LogFileLevel = 0
 LogFilter_AchievementUpdates = 1
@@ -390,13 +390,13 @@ LogFilter_Combat = 0
 LogFilter_SpellCast = 0
 WorldLogFile = ""
 WorldLogTimestamp = 0
-DBErrorLogFile = "DBErrors.log"
-CharLogFile = "Char.log"
+DBErrorLogFile = "Fallos Base de Datos.log"
+CharLogFile = "Personajes.log"
 CharLogTimestamp = 0
 CharLogDump = 0
-GmLogFile = ""
-GmLogTimestamp = 0
-GmLogPerAccount = 0
+GmLogFile = "Comandos GM.log"
+GmLogTimestamp = 1
+GmLogPerAccount = 1
 RaLogFile = ""
 LogColors = ""
 
@@ -936,7 +936,7 @@ LexicsCutterNoActionOnGM = 1
 ###################################################################################################################
 
 GameType = 1
-RealmZone = 1
+RealmZone = 11
 Expansion = 2
 DBC.Locale = 255
 DeclinedNames = 0
@@ -1010,7 +1010,7 @@ Event.Announce = 0
 BeepAtStart = 1
 ShowProgressBars = 1
 WaitAtStartupError = 0
-Motd = "Welcome to the Massive Network Game Object Server."
+Motd = "Bienvenido a Radical Server"
 Raid.MinLevel = 10
 CrowdControlHPBase = 0.1
 AllowTransferToCustomMap = 0
@@ -1083,7 +1083,7 @@ TalentsInspecting = 1
 #
 ###################################################################################################################
 
-AutoBroadcast.On = 0
+AutoBroadcast.On = 1
 AutoBroadcast.Center = 0
 AutoBroadcast.Timer = 30000
 
@@ -1358,7 +1358,7 @@ Channel.SilentlyGMJoin = 0
 ###################################################################################################################
 
 GM.LoginState            = 2
-GM.Visible               = 2
+GM.Visible               = 1
 GM.AcceptTickets         = 2
 GM.Chat                  = 2
 GM.WhisperingTo          = 2
@@ -1683,8 +1683,8 @@ Death.Ghost.RunSpeed.Battleground = 1.0
 ###################################################################################################################
 
 Battleground.CastDeserter = 1
-Battleground.QueueAnnouncer.Join = 0
-Battleground.QueueAnnouncer.Start = 0
+Battleground.QueueAnnouncer.Join = 1
+Battleground.QueueAnnouncer.Start = 1
 Battleground.InvitationType = 0
 BattleGround.PrematureFinishTimer = 300000
 BattleGround.PremadeGroupWaitForMatch = 1800000
@@ -1899,10 +1899,10 @@ SOAP.Port = 7878
 #
 ###################################################################################################################
 
-Anticheat.Enable = 0
+Anticheat.Enable = 1
 Anticheat.DelayAfterAction = 30
 Anticheat.GmLevel = 0
-Anticheat.Warden  = 0
+Anticheat.Warden  = 1
 
 ###################################################################################################################
 #    CharDelete.Method
@@ -2108,5 +2108,5 @@ VMSS.ForceUnloadDelay = 3000
 #        Default: "12,14,4570" Outdoor Stormwind, Outdoor Orgrimmar, Dalaran's Circle of Wills 
 #
 ###################################################################################################################
-DuelReset.Enable = 0
+DuelReset.Enable = 1
 DuelReset.AreaIds = "12,14,4570"
