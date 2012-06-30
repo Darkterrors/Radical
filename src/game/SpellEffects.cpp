@@ -10064,7 +10064,6 @@ void Spell::EffectScriptEffect(SpellEffectIndex eff_idx)
                 }
                 case 69165:                                 // Inhale Blight (Festergut)
                 {
-                    // TODO: get proper difficulty spell?
                     SpellAuraHolderPtr holder = m_caster->GetSpellAuraHolder(69166);
 
                     if (!holder)
